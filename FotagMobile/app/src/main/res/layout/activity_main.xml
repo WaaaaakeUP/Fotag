@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/menu_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:id="@+id/appName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="bold"
+                    android:textSize="23dp" />
+
+                <ImageButton
+                    android:id = "@+id/clear"
+                    android:layout_toRightOf="@id/appName"
+                    android:background="@drawable/clear"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:onClick="onClearClick"/>
+                
+                <ImageButton
+                    android:id="@+id/load"
+                    android:background="@drawable/menu"
+                    android:layout_toRightOf="@id/clear"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:onClick="onLoadClick" />
+
+                <ImageButton
+                    android:id="@+id/search"
+                    android:layout_toRightOf="@id/load"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/search"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:onClick="onSearchClick"/>
+
+                <EditText
+                    android:id="@+id/url"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/search"
+                    android:background="@color/colorEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:inputType="text"
+                    android:text="@string/search_url" />
+
+                <RatingBar
+                    android:id="@+id/toolbarRating"
+                    android:layout_toLeftOf="@id/toolbarRatingClear"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    style="@style/MyRatingStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stepSize="1"
+                    android:numStars="5"
+                    android:isIndicator="false" />
+
+                <ImageButton
+                    android:id="@+id/toolbarRatingClear"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rateclear"
+                    android:onClick="onRateClearClick"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:id="@+id/imageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar">
+        </ScrollView>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

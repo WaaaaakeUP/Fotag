@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxHeight="280dp"
+    android:maxWidth="280dp"
+    android:orientation="vertical"
+    android:layout_columnWeight="1"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:gravity="center_vertical|center_horizontal|center"
+    android:paddingTop="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:src="@drawable/cat1"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxHeight="200dp"
+        android:maxWidth="250dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+
+        <RatingBar
+            android:id="@+id/imageRaingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="1"
+            android:numStars="5"
+            style="@style/MyRatingStar" />
+
+        <ImageButton
+            android:id="@+id/imageRateClear"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/rateclear"/>
+
+    </LinearLayout>
+</LinearLayout>
